@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>✨ Todo App</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="add-task-heading">
+      <h2 id="add-task-heading" class="visually-hidden">Add a new task</h2>
+      <form id="todoForm" class="row" autocomplete="off">
+        <label for="todoText" class="visually-hidden">New task</label>
+        <input
+          id="todoText"
+          name="todoText"
+          type="text"
+          placeholder="What needs to be done?"
+          aria-describedby="Alert"
+          aria-label="New task"
+          required
+        />
+        <button id="AddUpdateClick" type="submit" class="btn-add">
+          Add
+        </button>
+      </form>
+      <p id="Alert" class="alert" role="status" aria-live="polite" aria-atomic="true"></p>
+    </section>
+
+    <aside aria-labelledby="count-heading">
+      <h2 id="count-heading" class="visually-hidden">Task count</h2>
+      <output id="count" aria-live="polite" aria-atomic="true"></output>
+    </aside>
+
+    <section aria-labelledby="todo-list-heading">
+      <h2 id="todo-list-heading">Todo Items</h2>
+      <ul id="list-items" aria-live="polite">
+        <li class="empty-state" aria-label="No tasks yet">
+          <span class="empty-icon" aria-hidden="true">📝</span>
+          <p class="empty-text">No tasks yet</p>
+          <p class="empty-subtext">Start by adding your first task above</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
