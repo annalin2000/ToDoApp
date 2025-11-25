@@ -53,6 +53,7 @@ main {
   flex-direction: column;
   gap: 16px;
   min-height: calc(100vh - 2 * clamp(16px, 2vw, 32px));
+  padding: 0 clamp(16px, 6vw, 40px) 32px;
 }
 
 header h1 {
